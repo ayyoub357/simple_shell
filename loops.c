@@ -57,6 +57,7 @@ int find_builtin(info_t *info)
 		}
 	return (built_in_ret);
 }
+/**
 void find_cmd(info_t *info)
 {
 	char *path = NULL;
@@ -79,7 +80,8 @@ void find_cmd(info_t *info)
 		info->path = path;
 		fork_cmd(info);
 	}
-	else {
+	else 
+	{
 		if ((interactive(info) || _getenv(info, "PATH=") || info->argv[0][0] == '\') && is_cmd(info, info->argv[0]))
 			fork_cmd(info);
 		else if (*(info->arg) != '\n')
@@ -89,6 +91,7 @@ void find_cmd(info_t *info)
 		}
 	}
 }
+*/
 void fork_cmd(info_t *info)
 {
 	pid_t child_pid;
