@@ -151,5 +151,9 @@ int replace_alias(info_t *info);
 int replace_vars(info_t *info);
 int replace_string(char **old, char *new);
 int main(int ac, char **av);
+int hsh(info_t *info, char **av);
+int find_builtin(info_t *info);
+void find_cmd(info_t *info);
+void fork_cmd(info_t *info);
 
 #endif
